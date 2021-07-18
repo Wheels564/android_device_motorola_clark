@@ -71,6 +71,18 @@ dalvik.vm.heapsize=512m
 dalvik.vm.heapstartsize=8m
 dalvik.vm.heaptargetutilization=0.75
 
+# Data Options
+# Commented this line out as it was reported to break WiFi calling on some carriers. Not even sure if it's required to begin with.
+persist.data.iwlan.enable=true
+persist.data.iwlan=1
+persist.data.iwlan.ipsec.ap=1
+
+# Debug Options
+persist.dbg.ims_volte_enable=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
 # DRM
 drm.service.enabled=true
 
@@ -121,6 +133,10 @@ tunnel.audio.encode=false
 use.voice.path.for.pcm.voip=true
 vidc.enc.dcvs.extra-buff-count=2
 
+# Other Options
+persist.sys.cust.lte_config=true
+persist.rcs.supported=1
+
 # Perf
 ro.min_freq_0=384000
 ro.min_freq_4=384000
@@ -170,6 +186,12 @@ ro.data.large_tcp_window_size=true
 ro.telephony.call_ring.multiple=false
 ro.use_data_netmgrd=true
 wifi.interface=wlan0
+ersist.radio.volte.dan_support=true
+persist.radio.rat_on=combine
+persist.radio.data_ltd_sys_ind=1
+persist.radio.data_con_rprt=1
+persist.radio.calls.on.ims=1
+persist.radio.VT_ENABLE=1
 
 # Sensors
 ro.qc.sdk.gestures.camera=false

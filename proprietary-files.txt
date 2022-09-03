@@ -363,6 +363,8 @@ vendor/lib/libqmi.so
 vendor/lib64/libqmi.so
 vendor/lib/libsmemlog.so
 vendor/lib64/libsmemlog.so
+vendor/lib/libvoice-svc.so
+vendor/lib64/libvoice-svc.so
 
 # GPS
 vendor/lib64/libloc_api_v02.so|1db714846d90a94b00db54486e156b25b2a1e64e
@@ -481,9 +483,11 @@ vendor/lib64/libdpmqmihal.so|ec071f4b67a605481e3e64a93626c7cfd9520945
  
 
 # Radio
+-vendor/app/ims/ims.apk
 -app/MotoSignatureApp/MotoSignatureApp.apk:app/MotoSignatureApp/MotoSignatureApp.apk:PRESIGNED
 -priv-app/atfwd/atfwd.apk
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+<<<<<<< HEAD
 bin/diag_klog:vendor/bin/diag_klog
 vendor/bin/diag_mdlog|e8b45dc25ebc28cf9c0cffb4de77730468965412
 bin/diag_mdlog-getlogs:vendor/bin/diag_mdlog-getlogs
@@ -513,6 +517,42 @@ etc/diag_mdlog/GNSS_SUPL_V7.cfg:vendor/etc/diag_mdlog/GNSS_SUPL_V7.cfg
 etc/diag_mdlog/GNSS_V7.cfg:vendor/etc/diag_mdlog/GNSS_V7.cfg
 etc/diag_mdlog/Vzw_Connection_Issues_V2.cfg:vendor/etc/diag_mdlog/Vzw_Connection_Issues_V2.cfg
 etc/diag_mdlog/WLAN_V1.cfg:vendor/etc/diag_mdlog/WLAN_V1.cfg
+=======
+bin/diag_klog
+bin/diag_mdlog
+bin/diag_mdlog-getlogs
+bin/diag_mdlog-wrap
+bin/diag_qshrink4_daemon
+bin/port-bridge
+bin/test_diag
+bin/imscmservice
+bin/imsdatadaemon
+bin/imsqmidaemon
+bin/ims_rtp_daemon
+bin/ipacm-diag
+bin/netmgrd
+bin/qmi_motext_hook
+bin/qmuxd
+bin/rfs_access
+bin/rmt_storage
+vendor/bin/qti
+etc/data/dsi_config.xml
+etc/data/netmgr_config.xml
+etc/data/qmi_config.xml
+etc/diag_mdlog/Connection_Issues_V11.cfg
+etc/diag_mdlog/Bluetooth_V1.cfg
+etc/diag_mdlog/Bluetooth_audio_V1.cfg
+etc/diag_mdlog/default.cfg
+etc/diag_mdlog/default.opts
+etc/diag_mdlog/FIT_V20_1.cfg
+etc/diag_mdlog/FIT_V20_2_volte_full_ip.cfg
+etc/diag_mdlog/GNSS_OTDOA_V1.cfg
+etc/diag_mdlog/GNSS_SUPL_V7.cfg
+etc/diag_mdlog/GNSS_V7.cfg
+etc/diag_mdlog/Vzw_Connection_Issues_V2.cfg
+etc/diag_mdlog/WLAN_V1.cfg
+etc/permissions/ims.xml
+>>>>>>> parent of cb7ff88 (clark: Nuke IMS)
 etc/permissions/org.simalliance.openmobileapi.xml
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
@@ -528,6 +568,34 @@ lib/libqmimotext.so:vendor/lib/libqmimotext.so
 lib64/libqmimotext.so:vendor/lib64/libqmimotext.so
 lib64/libadropbox.so:vendor/lib64/libadropbox.so
 vendor/qcril.db
+vendor/lib/lib-imscamera.so
+vendor/lib64/lib-imscamera.so
+vendor/lib/lib-imsdpl.so
+vendor/lib64/lib-imsdpl.so
+vendor/lib/lib-imsqimf.so
+vendor/lib64/lib-imsqimf.so
+vendor/lib/lib-imsrcs.so
+vendor/lib64/lib-imsrcs.so
+vendor/lib/lib-imsrcscm.so
+vendor/lib64/lib-imsrcscm.so
+vendor/lib/lib-imsrcscmclient.so
+vendor/lib64/lib-imsrcscmclient.so
+vendor/lib/lib-ims-rcscmjni.so
+vendor/lib64/lib-ims-rcscmjni.so
+vendor/lib/lib-imsrcscmservice.so
+vendor/lib64/lib-imsrcscmservice.so
+vendor/lib/lib-imss.so
+vendor/lib64/lib-imss.so
+vendor/lib/lib-imsSDP.so
+vendor/lib64/lib-imsSDP.so
+vendor/lib/lib-imsvt.so
+vendor/lib64/lib-imsvt.so
+vendor/lib/lib-imsxml.so
+vendor/lib64/lib-imsxml.so
+vendor/lib/libimscamera_jni.so
+vendor/lib64/libimscamera_jni.so
+vendor/lib/libimsmedia_jni.so
+vendor/lib64/libimsmedia_jni.so
 vendor/lib/liblqe.so
 vendor/lib64/liblqe.so
 vendor/lib/libmdmdetect.so
@@ -535,8 +603,16 @@ vendor/lib64/libmdmdetect.so
 vendor/lib/libnetmgr.so
 vendor/lib64/libnetmgr.so
 vendor/lib/libperipheral_client.so
+<<<<<<< HEAD
 # libperipheral_client.so from bullhead-ota-opm7.181205.001-b1af2457
 vendor/lib64/libperipheral_client.so|bc6b71eb5b8fce1c2ddf27ea3a0b42df380e6a0d
+=======
+vendor/lib64/libperipheral_client.so
+vendor/lib/librcc.so
+vendor/lib64/librcc.so
+vendor/lib/lib-rcsimssjni.so
+vendor/lib64/lib-rcsimssjni.so
+>>>>>>> parent of cb7ff88 (clark: Nuke IMS)
 vendor/lib/lib-rcsjni.so
 vendor/lib64/lib-rcsjni.so
 vendor/lib/libril-qc-ltedirectdisc.so

@@ -30,6 +30,14 @@ include $(call all-makefiles-under,$(LOCAL_PATH))
 
 include $(CLEAR_VARS)
 
+IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
+IMS_SYMLINKS := $(addprefix $(TARGET_OUT)/app/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
+$(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "IMS lib link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /system/vendor/lib64/$(notdir $@) $@
+
 WV_IMAGES := widevine.b00 widevine.b01 widevine.b02 widevine.b03 widevine.mdt
 WV_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/firmware/,$(notdir $(WV_IMAGES)))
 $(WV_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
@@ -54,6 +62,7 @@ $(BT_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /bt_firmware/image/$(notdir $@) $@
 
+<<<<<<< HEAD
 RFS_MSM_ADSP_SYMLINKS := $(TARGET_OUT)/rfs/msm/adsp/
 $(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS MSM ADSP folder structure: $@"
@@ -122,5 +131,8 @@ $(RFS_APQ_GNSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /persist/rfs/shared $@/shared
 
 ALL_DEFAULT_INSTALLED_MODULES += $(PERSIST_WCNSS) $(WCNSS_CFG_INI) $(WV_SYMLINKS) $(FIRMWARE_SYMLINKS) $(DMENGINE_SYMLINKS) $(BT_FIRMWARE_SYMLINKS) $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS) $(RFS_MDM_ADSP_SYMLINKS) $(RFS_MDM_MPSS_SYMLINKS) $(RFS_MDM_SPARROW_SYMLINKS) $(RFS_APQ_GNSS_SYMLINKS)
+=======
+ALL_DEFAULT_INSTALLED_MODULES += $(PERSIST_WCNSS) $(WCNSS_CFG_INI) $(IMS_SYMLINKS) $(WV_SYMLINKS) $(FIRMWARE_SYMLINKS) $(DMENGINE_SYMLINKS) $(BT_FIRMWARE_SYMLINKS)
+>>>>>>> parent of cb7ff88 (clark: Nuke IMS)
 
 endif

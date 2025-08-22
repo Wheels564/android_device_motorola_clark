@@ -9,6 +9,9 @@ $(call inherit-product, device/motorola/clark/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Inherit some common PARTNER_GMS stuff.
+$(call inherit-product, vendor/partner_gms/products/gms.mk)
+
 DEVICE_PACKAGE_OVERLAYS += device/motorola/clark/overlay
 
 ## Device identifier. This must come after all inclusions
